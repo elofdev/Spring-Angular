@@ -1,0 +1,7 @@
+{
+    "editor.suggest.showInlineDetails": false,
+    "editor.lineHeight": -1,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.find.loop": false,
+    "editor.formatOnType": true
+}
