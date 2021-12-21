@@ -11,7 +11,12 @@ export class CoursesService {
   // Uri do LOCAL/CAMINHO de onde será obtido a infoemação
   // ou pra onde direcionaremos a ação do HTTPClient...neste caso apenas para teste.
   // Posteriormente será o endereço da api do Spring.
-  private readonly API = '/assets/courses.json';
+  // DESABILITADA CRIADA APENAS PRA TESTE: private readonly API = '/assets/courses.json';
+
+  // AGORA VAMOS TRAZER AS INFORMAÇÕES DA API(CRUD-SPRING) GERADA PELO METHODO GET,
+  //testada na ferramente thunder
+
+  private readonly API = 'api/courses';
 
   /* Aoenas de passar o "private httpCliente:HttpCliente" para o construtor o Angular fornece automaticamente
  o httpCliente para nós é o que chama-mos de Inheção de Sependência.
