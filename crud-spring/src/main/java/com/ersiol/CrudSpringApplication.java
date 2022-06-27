@@ -23,6 +23,13 @@ public class CrudSpringApplication {
 			c.setName("Angular");
 			c.setCategory("Front-end");
 			coursesRepository.save(c);
+
+			Courses c1 = new Courses();
+			c1.setName("Spring");
+			c1.setCategory("back-end");
+			coursesRepository.save(c1);
+
+
 		};
 	}
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { ErrorDialogComponent } from '../../shared/components/error-dialog/error-dialog.component';
@@ -14,7 +15,7 @@ import { CoursesService } from '../services/courses.service';
 })
 export class CoursesComponent implements OnInit {
   courses$: Observable<Course[]>;
-  displayedColumns = ['name', 'category'];
+  displayedColumns = ['id', 'name', 'category', 'actions'];
 
   // Injeção de Dependência forma 1 passo 1
   //  coursesService: CoursesService;
@@ -23,7 +24,9 @@ export class CoursesComponent implements OnInit {
   // Injeção de Dependência forma 2 passo 1 - direto no contrutor
   constructor(
     private coursesService: CoursesService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router,
+    private route: ActivatedRoute
   ) {
     // Injeção de Dependência forma 1 passo 2
     //this.coursesService = new CoursesService();

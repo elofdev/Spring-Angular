@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { delay, first, tap } from 'rxjs/operators';
+import { first, delay, tap } from 'rxjs/operators';
 
 import { Course } from '../model/course';
 
 @Injectable({
   providedIn: 'root',
 })
+
 export class CoursesService {
   // Uri do LOCAL/CAMINHO de onde será obtido a infoemação
   // ou pra onde direcionaremos a ação do HTTPClient...neste caso apenas para teste.
@@ -18,8 +19,8 @@ export class CoursesService {
 
   private readonly API = 'api/courses';
 
-  /* Aoenas de passar o "private httpCliente:HttpCliente" para o construtor o Angular fornece automaticamente
- o httpCliente para nós é o que chama-mos de Inheção de Sependência.
+  /* Apenas de passar o "private httpCliente:HttpCliente" para o construtor o Angular fornece automaticamente
+ o httpCliente para nós é o que chama-mos de Injeção de dependência.
  ou seja dizendo pro Angular que precisamos de uma instancia do HttpCliente e a maneira de fazermos
   isso é através da declaração no construtor */
   constructor(private httpClient: HttpClient) {}
