@@ -15,14 +15,14 @@ import { CoursesService } from '../services/courses.service';
 })
 export class CoursesComponent implements OnInit {
   courses$: Observable<Course[]>;
-  displayedColumns = ['id', 'name', 'category', 'actions'];
+  displayedColumns = ['_id','name', 'category', 'actions'];
 
   // Injeção de Dependência forma 1 passo 1
   //  coursesService: CoursesService;
   //-----------------------
 
   // Injeção de Dependência forma 2 passo 1 - direto no contrutor
-  constructor(
+  constructor (
     private coursesService: CoursesService,
     public dialog: MatDialog,
     private router: Router,
@@ -45,5 +45,12 @@ export class CoursesComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
+  
+  onAdd() {
+    this.router.navigate(['new'],{relativeTo:this.route});
+  }
+
 }
