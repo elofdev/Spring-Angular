@@ -1,7 +1,7 @@
 {
   "editor.suggest.showInlineDetails": false,
   "editor.lineHeight": -1,
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.find.loop": false,
   "editor.formatOnType": true,
   "workbench.colorCustomizations": {
