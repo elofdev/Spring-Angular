@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
@@ -41,16 +41,17 @@ export class CoursesComponent implements OnInit {
 
   onError(errorMsg: string) {
     this.dialog.open(ErrorDialogComponent, {
-      data: errorMsg,
+      data: errorMsg
     });
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
 
-  }
-  
   onAdd() {
     this.router.navigate(['new'],{relativeTo:this.route});
+  }
+  onEdit() {
+    console.log('onEdit');
   }
 
 }

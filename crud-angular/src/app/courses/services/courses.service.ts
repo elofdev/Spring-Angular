@@ -17,7 +17,9 @@ export class CoursesService {
   // AGORA VAMOS TRAZER AS INFORMAÇÕES DA API(CRUD-SPRING) GERADA PELO METHODO GET,
   //testada na ferramente thunder
 
-  private readonly API = 'api/courses';
+   private readonly API = 'api/courses';
+  //private readonly API = 'assets/courses.json';
+
 
   /* Apenas de passar o "private httpCliente:HttpCliente" para o construtor o Angular fornece automaticamente
  o httpCliente para nós é o que chama-mos de Injeção de dependência.
