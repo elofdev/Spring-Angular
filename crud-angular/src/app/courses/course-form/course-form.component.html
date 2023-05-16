@@ -2,7 +2,7 @@
   <mat-toolbar color="primary">Detalhes do Curso</mat-toolbar>
   <mat-card-content>
     <!-- Associar o formulário atráves da diretiva [formGrup]="nome_variável_form" do course-form.component.ts -->
-    <form [formGroup]="form">
+    <form [formGroup]="form" class="min-width">
       <mat-form-field class="full-width">
         <!-- Associar campos name, através do formControlName="name" e
                     category com formControlName="category" do course-form.component.ts -->
