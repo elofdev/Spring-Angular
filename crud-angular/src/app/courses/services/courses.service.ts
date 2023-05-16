@@ -9,7 +9,7 @@ import { Course } from '../model/course';
 })
 
 export class CoursesService {
-  // Uri do LOCAL/CAMINHO de onde será obtido a infoemação
+  // Uri do LOCAL/CAMINHO de onde será obtido a informação
   // ou pra onde direcionaremos a ação do HTTPClient...neste caso apenas para teste.
   // Posteriormente será o endereço da api do Spring.
   // DESABILITADA CRIADA APENAS PRA TESTE: private readonly API = '/assets/courses.json';
@@ -35,5 +35,9 @@ export class CoursesService {
       delay(5000),
       tap((courses) => console.log(courses))
     );
+  }
+
+  save(record: Course) {
+    return this.httpClient.post<Course>(this.API,record).pipe(first());
   }
 }
